@@ -19,7 +19,7 @@ Future GOFS extensions may support on-demand services:
 - providing private and/or shared trips
 - that can be booked in advance.
 
-GOFS is a work in progress, there are currently important missing functionalities like accurate pricing, travel time estimations, etc. Questions or comments can be sent to GOFS@transitapp.com
+GOFS is a work in progress, there are currently important missing functionalities like accurate pricing, travel time estimations, etc. Questions or comments can be sent to [gofs@mobilitydata.org](mailto:gofs@mobilitydata.org).
 
 ## GOFS JSON schema
 A JSON schema which can be used to validate GOFS feeds can be found [here](schema/).
