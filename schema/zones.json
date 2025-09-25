@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/GOFS-lite/GOFS-lite/blob/main/reference.md#zonesjson",
+  "$id": "https://github.com/MobilityData/GOFS/blob/main/reference.md#zonesjson",
   "description": "Geographically defines zones where on-demand services are available to the riders.",
   "type": "object",
   "properties": {
@@ -15,7 +15,7 @@
       "minimum": 0
     },
     "version": {
-      "description": "GOFS-lite version number to which the feed conforms, according to the versioning framework (added in v1.1).",
+      "description": "GOFS version number to which the feed conforms, according to the versioning framework (added in v1.1).",
       "type": "string",
       "enum": [
         "1.0"
@@ -25,7 +25,7 @@
       "type": "object",
       "properties": {
         "zones": {
-          "title": "GeoJSON FeatureCollection with extra fields required by GOFS-lite",
+          "title": "GeoJSON FeatureCollection with extra fields required by GOFS",
           "type": "object",
           "required": [
             "type",
