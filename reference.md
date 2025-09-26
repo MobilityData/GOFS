@@ -1,4 +1,4 @@
-## General On-Demand Format Specification Reference
+## General On-Demand Feed Specification Reference
 
 This document defines the format and structure of the files that comprise a GOFS dataset.
 
