@@ -13,9 +13,61 @@ Changes to the specification (gofs.md) and the specification governance (governa
 The specification has a designated Maintainer. The Maintainer MAY be an individual, a group of individuals or an organization. The current Maintainer is MobilityData. The Maintainer role includes but is not limited to: reviewing PRs, maintaining documentation, facilitation and counting of votes, merging successful proposals, managing releases and their Version Release Cycles. The current Git repository is the GOFS Github repository. The current Slack channel is the \#gofs channel on the MobilityData Slack.
 
 ## **Change Process**
-
-![](https://raw.githubusercontent.com/MobilityData/gbfs/master/images/change_process.jpg)
-
+```mermaid
+---
+config:
+  theme: 'base'
+  themeVariables:
+    primaryColor: '#AEEA00'
+    primaryTextColor: '#000'
+    primaryBorderColor: '#AEEA00'
+    lineColor: '#000'
+    secondaryColor: '#fff'
+    tertiaryColor: '#fff'
+---
+flowchart LR
+    A["🧑‍💻
+    **Pull Request is Opened**.
+    Anyone can propose a change."]
+    B("🗳️
+    **Vote is Opened**
+    Anyone can vote.")
+    C(("✅
+    **Vote Passes**
+    Unanimity with at least 
+    3 votes, including 
+    1 producer and 
+    1 consumer."))
+    D{"❌
+    **Vote Fails**"}
+    E("🙌
+    **Release Candidate
+    Version is Released**")
+    J@{ shape: sm-circ, label: "" }
+    F@{ shape: brace-r, label: "🗓️
+    In November
+    for MAJOR versions
+    —
+    In May/November
+    for MINOR versions" }
+    G("🌟
+    **The Version 
+    Becomes Official**")
+    A --->|Discussion for 
+    at least 7 days| B
+    B -->|Voting for 10 days| J
+    J --> C
+    J ---> D
+    D -->|Continue to work 
+    on the proposal 
+    or
+    abandon the proposal| A
+    C -->|Added to changelist| E
+    F -.-> E
+    E --->|Implementation 
+    by at least 1 producer 
+    and 1 consumer| G
+```
 To manage the change process, the following guidelines have been established.
 
 * Anyone can propose a change.  
@@ -62,10 +114,10 @@ To manage the change process, the following guidelines have been established.
   * MAJOR versions SHOULD be released every November by the Maintainer. Voting for a MAJOR version SHOULD be complete by October 31st.  
   * In the event that there is no MAJOR version release for the period, a MINOR version MAY be released in November.
 
-| Key Dates | Period |  |
-| :---- | :---- | :---- |
-| April 30th | Vote Deadline |  |
-| May | MINOR Version Release |  |
-| October 31st | Vote Deadline |  |
-| November | MINOR or MAJOR Version Release |  |
-| Else | Discussion and Voting |  |
+| Key Dates | Period |
+| :---- | :---- |
+| April 30th | Vote Deadline |
+| May | MINOR Version Release |
+| October 31st | Vote Deadline |
+| November | MINOR or MAJOR Version Release |
+| Else | Discussion and Voting |
