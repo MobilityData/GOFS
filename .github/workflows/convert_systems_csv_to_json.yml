@@ -11,8 +11,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+      - name: Setup global variables
+        id: global_vars
+        run: |
+            echo "TODAYS_DAY=$(date '+%d')" >> $GITHUB_ENV # Ex.: 27
+            echo "TODAYS_MONTH=$(date '+%m')" >> $GITHUB_ENV # Ex.: 07
+            echo "TODAYS_YEAR=$(date '+%Y')" >> $GITHUB_ENV # Ex.: 2023
+    
+      - name: Load secrets from 1Password
+        id: onepw_secrets
+        uses: 1password/load-secrets-action@v2.0.0
+        with:
+            export-env: true # Export loaded secrets as environment variables
+        env:
+            OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+            GITHUB_TOKEN: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/GitHub generic action token for all repos/credential"
+            
       - name: Checkout repo
         uses: actions/checkout@v5.0.0
+
+      - name: Create branch name
+        id: create_branch_name
+        run: |
+            echo "BRANCH=feat-update-systems-json-${{ env.TODAYS_YEAR }}-${{ env.TODAYS_MONTH }}-${{ env.TODAYS_DAY }}" >> $GITHUB_OUTPUT
 
       - name: Set up Python
         uses: actions/setup-python@v6.0.0
@@ -42,14 +64,14 @@ jobs:
               json.dump(wrapped, f, indent=2, ensure_ascii=False)
           EOF
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add systems.json
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: Update systems.json from systems.csv"
-            git push
-          fi
+      - name: Commit & Create Pull Request
+        id: createpr
+        uses: peter-evans/create-pull-request@v7.0.6
+        with:
+          token: ${{ env.GITHUB_TOKEN }}
+          sign-commits: true
+          assignees: "fredericsimard"
+          branch: ${{ steps.create_branch_name.outputs.BRANCH }}
+          commit-message: "chore: Update systems.json from systems.csv"
+          title: 'Update `systems.json` file'
+          body: 'Update `systems.json` file from the recently updated `systems.csv` file.'
