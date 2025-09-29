@@ -1,0 +1,54 @@
+name: Convert systems.csv to JSON
+
+on:
+  push:
+    paths:
+      - systems.csv
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5.0.0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.0.0
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Convert systems.csv to JSON
+        run: |
+          python - <<'EOF'
+          import pandas as pd
+          import json
+
+          # Read the CSV
+          df = pd.read_csv("systems.csv")
+
+          # Convert to list of dicts
+          data = df.to_dict(orient="records")
+
+          # Wrap in "systems"
+          wrapped = {"systems": data}
+
+          # Write to systems.json
+          with open("systems.json", "w", encoding="utf-8") as f:
+              json.dump(wrapped, f, indent=2, ensure_ascii=False)
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add systems.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: Update systems.json from systems.csv"
+            git push
+          fi
