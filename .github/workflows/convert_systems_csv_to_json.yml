@@ -53,6 +53,9 @@ jobs:
           # Read the CSV
           df = pd.read_csv("systems.csv")
 
+          # Replace NaN with None so JSON is valid
+          df = df.where(pd.notnull(df), None)
+          
           # Convert to list of dicts
           data = df.to_dict(orient="records")
 
@@ -61,7 +64,7 @@ jobs:
 
           # Write to systems.json
           with open("systems.json", "w", encoding="utf-8") as f:
-              json.dump(wrapped, f, indent=2, ensure_ascii=False)
+              json.dump(wrapped, f, indent=2, ensure_ascii=False, allow_nan=False)
           EOF
 
       - name: Commit & Create Pull Request
