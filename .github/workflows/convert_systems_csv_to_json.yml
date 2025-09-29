@@ -1,6 +1,7 @@
 name: Convert systems.csv to JSON
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - systems.csv
