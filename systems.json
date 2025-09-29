@@ -1,0 +1,121 @@
+{
+  "systems": [
+    {
+      "Country Code": "CA",
+      "Name": "Taxi Montreal",
+      "Location": "Montreal, QC",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Arlington Heights-Rolling Meadows Pace On Demand",
+      "Location": "Arlington Heights, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Batavia Pace On Demand",
+      "Location": "Batavia, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Hoffman Estates Pace On Demand",
+      "Location": "Hoffman Estates, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Lansing Area On Demand Pace On Demand",
+      "Location": "Lansing, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Naperville-Aurora On Demand Pace On Demand",
+      "Location": "Naperville, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Round Lake Area Pace On Demand",
+      "Location": "Round Lake, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Southeast Aurora On Demand Pace On Demand",
+      "Location": "Aurora, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "St. Charles-Geneva Pace On Demand",
+      "Location": "St. Charles, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Vernon Hills-Mundelein Pace On Demand",
+      "Location": "Vernon Hills, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "West Joliet Pace On Demand",
+      "Location": "West Joliet, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Wheaton-Winfield On Demand Pace On Demand",
+      "Location": "Wheaton, IL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    },
+    {
+      "Country Code": "US",
+      "Name": "Freebee Miami Beach",
+      "Location": "Miami Beach, FL",
+      "System ID": null,
+      "URL": null,
+      "Auto-Discovery URL": null,
+      "Supported Versions": 1.0
+    }
+  ]
+}
