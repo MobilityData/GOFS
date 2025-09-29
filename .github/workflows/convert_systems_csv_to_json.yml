@@ -48,21 +48,22 @@ jobs:
         run: |
           python - <<'EOF'
           import pandas as pd
+          import numpy as np
           import json
-
+          
           # Read the CSV
           df = pd.read_csv("systems.csv")
-
-          # Replace NaN with None so JSON is valid
-          df = df.where(pd.notnull(df), None)
+          
+          # Replace NaN (and similar) with None
+          df = df.replace({np.nan: None})
           
           # Convert to list of dicts
           data = df.to_dict(orient="records")
-
+          
           # Wrap in "systems"
           wrapped = {"systems": data}
-
-          # Write to systems.json
+          
+          # Write to systems.json (safe JSON only)
           with open("systems.json", "w", encoding="utf-8") as f:
               json.dump(wrapped, f, indent=2, ensure_ascii=False, allow_nan=False)
           EOF
