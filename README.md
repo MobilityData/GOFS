@@ -31,7 +31,7 @@ GOFS is an open standard. It relies on users like you to contribute ideas, concr
 - The offical specification change process can be found under [governance.md](https://github.com/MobilityData/GOFS/blob/main/governance.md).
 - Mature ideas to improve GOFS can be contributed via [GitHub Issue](https://github.com/MobilityData/GOFS/issues/new) or Pull Request.
 - Bigger picture product and vision discussions are ongoing on [GitHub Discussions](https://github.com/MobilityData/GOFS/discussions).
-- Additional Q&A and for peer technical support can use the [#GOFS on the MobilityData Slack](https://mobilitydata-io.slack.com/archives/C08TGF1HM9Q) [(MobilityData Slack first time registration)](https://share.mobilitydata.org/slack).
+- Additional Q&A and for peer technical support use the [#GOFS on the MobilityData Slack](https://mobilitydata-io.slack.com/archives/C08TGF1HM9Q) [(MobilityData Slack first time registration)](https://share.mobilitydata.org/slack).
 
 ## GOFS use
 
