@@ -1,6 +1,6 @@
 # GOFS
 
-(This project was previously know as GOFS-lite. [Read more about the transition to MobilityData](https://mobilitydata.org/gofs-a-new-chapter-for-on-demand-transportation-data/).)
+> This project was previously know as GOFS-lite. [Read more about the transition to MobilityData](https://mobilitydata.org/gofs-a-new-chapter-for-on-demand-transportation-data/).
 
 The General On-Demand Feed Specification (GOFS) allows on-demand service providers to define their service in a lightweight format that can be consumed by transport applications in an interoperable way.
 
