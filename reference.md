@@ -516,37 +516,36 @@ Field Name | Presence | Type | Description
   "version": "1.0",
   "data": {
     "calendars": [
-        {
-          "calendar_id": "weekday",
-          "days": [
+      {
+         "calendar_id": "weekday",
+         "days": [
             "mon",
             "tue",
             "wed",
             "thu",
             "fri"
-          ],
-          "start_date": "20210901",
-          "end_date": "20211031",
-          "excepted_dates": [
+         ],
+         "start_date": "20210901",
+         "end_date": "20211031",
+         "excepted_dates": [
             "20210906"
-          ]
-        },
-        {
-          "calendar_id": "weekend",
-          "days": [
+         ]
+      },
+      {
+         "calendar_id": "weekend",
+         "days": [
             "sat",
             "sun"
-          ],
-          "start_date": "20210901",
-          "end_date": "20211031"
-        },
-        {
-          "calendar_id": "labor_day",
-          "start_date": "20210906",
-          "end_date": "20210906"
-        }
-      ]
-    }
+         ],
+         "start_date": "20210901",
+         "end_date": "20211031"
+      },
+      {
+         "calendar_id": "labor_day",
+         "start_date": "20210906",
+         "end_date": "20210906"
+      }
+    ]
   }
 }
 ```
