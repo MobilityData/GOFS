@@ -260,7 +260,7 @@ Field Name | Presence | Type | Description
   "version": "1.0",
   "data": {
     "language": "en",
-    "timezone": "Canada/Toronto",
+    "timezone": "America/Toronto",
     "name": "Example MicroTransit",
     "short_name": "Micro",
     "operator": "MicroTransit, Inc",
