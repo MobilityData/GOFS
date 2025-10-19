@@ -541,7 +541,7 @@ Field Name | Presence | Type | Description
           "end_date": "20211031"
         },
         {
-          "calendar_id": "labor_day"
+          "calendar_id": "labor_day",
           "start_date": "20210906",
           "end_date": "20210906"
         }
