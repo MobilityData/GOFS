@@ -368,9 +368,9 @@ Field Name | Presence | Type | Description
  -&nbsp;`type` | REQUIRED | String | `FeatureCollection` as per [RFC 7946](https://tools.ietf.org/html/rfc7946). |
  -&nbsp;`features` | REQUIRED | Array | Array of objects where each object represent a zone, as defined below. |
  -&nbsp;\-&nbsp;`type` | REQUIRED | String | `Feature` as per [RFC 7946](https://tools.ietf.org/html/rfc7946). |
- -&nbsp;\-&nbsp;`zone_id` | REQUIRED | ID | Unique identifier of the zone. |
  -&nbsp;\-&nbsp;`geometry` | REQUIRED | GeoJSON Polygon | A polygon that describes where riders can be picked up or dropped off. <p> Following the [right-hand rule](https://tools.ietf.org/html/rfc7946#section-3.1.6), a clockwise arrangement of points defines the area enclosed by the polygon, where pickup and drop off MAY occur; while a counterclockwise order defines the area outside the polygon, where pickup and drop off MAY NOT occur. |
  -&nbsp;\-&nbsp;`properties` | REQUIRED | Object | Location property keys. |
+ -&nbsp;\-&nbsp;\-&nbsp;`zone_id` | REQUIRED | ID | Unique identifier of the zone. |
  -&nbsp;\-&nbsp;\-&nbsp;`name` | OPTIONAL | String | Indicates the name of the zone as displayed to the riders. |
 
 
@@ -387,8 +387,8 @@ Field Name | Presence | Type | Description
       "features": [
         {
           "type": "Feature",
-          "zone_id": "zoneA",
           "properties": {
+            "zone_id": "zoneA",
             "name": "Montréal Area"
           },
           "geometry": {
