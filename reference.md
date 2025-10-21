@@ -19,7 +19,7 @@ This document defines the format and structure of the files that comprise a GOFS
    - [gofs_versions.json](#gofs_versionsjson)
    - [system_information.json](#system_informationjson)
    - [service_brands.json](#service_brandsjson)
-   - [vehicle_types](#vehicle_typesjson)
+   - [vehicle_types.json](#vehicle_typesjson)
    - [zones.json](#zonesjson)
    - [operating_rules.json](#operating_rulesjson)
    - [calendars.json](#calendarsjson)
