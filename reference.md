@@ -260,7 +260,7 @@ Field Name | Presence | Type | Description
   "version": "1.0",
   "data": {
     "language": "en",
-    "timezone": "Canada/Toronto",
+    "timezone": "America/Toronto",
     "name": "Example MicroTransit",
     "short_name": "Micro",
     "operator": "MicroTransit, Inc",
@@ -301,19 +301,19 @@ Field Name | Presence | Type | Description
         "brand_id": "regular_ride",
         "brand_name": "Regular Ride",
         "brand_color": "1C7F49",
-        "brand_text_color": "FFFFFF",
+        "brand_text_color": "FFFFFF"
       },
       {
         "brand_id": "large_ride",
         "brand_name": "Large Ride",
         "brand_color": "1C7F49",
-        "brand_text_color": "FFFFFF",
+        "brand_text_color": "FFFFFF"
       },
       {
         "brand_id": "shared_ride",
         "brand_name": "Shared Ride",
         "brand_color": "1C7F49",
-        "brand_text_color": "FFFFFF",
+        "brand_text_color": "FFFFFF"
       }
     ]
   }
@@ -345,7 +345,7 @@ Field Name | Presence | Type | Description
       {
         "vehicle_type_id": "large_van",
         "max_capacity": 7,
-        "wheelchair_boarding": "boarding_accessible",
+        "wheelchair_boarding": "boarding_accessible"
       }
     ]
   }
@@ -516,37 +516,36 @@ Field Name | Presence | Type | Description
   "version": "1.0",
   "data": {
     "calendars": [
-        {
-          "calendar_id": "weekday",
-          "days": [
+      {
+         "calendar_id": "weekday",
+         "days": [
             "mon",
             "tue",
             "wed",
             "thu",
             "fri"
-          ],
-          "start_date": "20210901",
-          "end_date": "20211031",
-          "excepted_dates": [
+         ],
+         "start_date": "20210901",
+         "end_date": "20211031",
+         "excepted_dates": [
             "20210906"
-          ]
-        },
-        {
-          "calendar_id": "weekend",
-          "days": [
+         ]
+      },
+      {
+         "calendar_id": "weekend",
+         "days": [
             "sat",
             "sun"
-          ],
-          "start_date": "20210901",
-          "end_date": "20211031"
-        },
-        {
-          "calendar_id": "labor_day"
-          "start_date": "20210906",
-          "end_date": "20210906"
-        }
-      ]
-    }
+         ],
+         "start_date": "20210901",
+         "end_date": "20211031"
+      },
+      {
+         "calendar_id": "labor_day",
+         "start_date": "20210906",
+         "end_date": "20210906"
+      }
+    ]
   }
 }
 ```
@@ -628,12 +627,12 @@ The first 20 minutes cost $1.00 CAD per minute, and are charged every minute. Af
           {
             "interval": 1,
             "end": 20,
-            "amount": 1.0,
+            "amount": 1.0
           },
           {
             "interval": 0.5,
             "start": 20,
-            "amount": 1.5,
+            "amount": 1.5
           }
         ]
       }
@@ -665,7 +664,7 @@ The user does not pay more than the base price of $2.50 CAD for the first 10km. 
           {
             "interval": 5,
             "start": 25,
-            "amount": 3.0,
+            "amount": 3.0
           }
         ],
         "rider": [
@@ -776,15 +775,15 @@ The following fields are all attributes within the main "data" object for this f
           "to_zone_ids": null,
           "booking_type": 1,
           "prior_notice_duration_min": 30,
-          "prior_notice_duration_max": 180,
+          "prior_notice_duration_max": 180
         },
         {
           "from_zone_ids": ["zoneA"],
           "to_zone_ids": ["zoneB"],
           "booking_type": 2,
           "prior_notice_start_day": 2,
-          "prior_notice_last_time": "17:00:00",  
-          }
+          "prior_notice_last_time": "17:00:00"
+        }
       ]
     }
   }
@@ -846,7 +845,7 @@ Field Name | Presence | Type | Description
             "android_uri": "https://www.example.com/app?service_type=REG&platform=android",
             "ios_uri": "https://www.example.com/app?service_type=REG&platform=ios",
             "web_uri": "https://www.example.com/app?service_type=REG",
-            "phone_number": "+18005551234",
+            "phone_number": "+18005551234"
         }
       },
       {
@@ -860,7 +859,7 @@ Field Name | Presence | Type | Description
             "android_uri": "https://www.example.com/app?service_type=XL&platform=android",
             "ios_uri": "https://www.example.com/app?service_type=XL&platform=ios",
             "web_uri": "https://www.example.com/app?service_type=XL",
-            "phone_number": "+18005551234",
+            "phone_number": "+18005551234"
         }
       }
     ]
