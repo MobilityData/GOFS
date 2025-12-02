@@ -76,6 +76,7 @@ jobs:
           sign-commits: true
           assignees: "fredericsimard"
           branch: ${{ steps.create_branch_name.outputs.BRANCH }}
+          base: main
           commit-message: "chore: Update systems.json from systems.csv"
           title: 'Update `systems.json` file'
           body: 'Update `systems.json` file from the recently updated `systems.csv` file.'
