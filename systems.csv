@@ -1,4 +1,4 @@
-Country Code,Name,Location,System ID,URL,Auto-Discovery URL,Supported Versions
-CA,Taxi Montreal,"Montreal, QC",,,(not yet published),1.0
-US,Pace On Demand,"Arlington Heights, IL",,,(not yet published),1.0
-US,Freebee Miami Beach,"Miami Beach, FL",,,(not yet published),1.0
+Country Code,Name,Location,System ID,Access Information,URL,Auto-Discovery URL,Supported Versions
+CA,Taxi Montréal,"Montréal, QC",(forethcoming https://www.registretaximontreal.ca/),https://taximtl.ville.montreal.qc.ca/api/gofs-lite,(not yet published),1.0
+US,Pace On Demand,"Arlington Heights, IL",,,,(forethcoming),1.0
+US,Freebee Miami Beach,"Miami Beach, FL",,,,(forethcoming),1.0
