@@ -2,20 +2,22 @@
   "systems": [
     {
       "Country Code": "CA",
-      "Name": "Taxi Montreal",
-      "Location": "Montreal, QC",
-      "System ID": null,
-      "URL": null,
-      "Auto-Discovery URL": "(not yet published)",
-      "Supported Versions": 1.0
+      "Name": "Taxi Montréal",
+      "Location": "Montréal, QC",
+      "System ID": "(forthcoming https://www.registretaximontreal.ca/)",
+      "Access Information": "https://taximtl.ville.montreal.qc.ca/api/gofs-lite",
+      "URL": "(forthcoming)",
+      "Auto-Discovery URL": "1.0",
+      "Supported Versions": null
     },
     {
       "Country Code": "US",
       "Name": "Pace On Demand",
       "Location": "Arlington Heights, IL",
       "System ID": null,
+      "Access Information": null,
       "URL": null,
-      "Auto-Discovery URL": "(not yet published)",
+      "Auto-Discovery URL": "(forthcoming)",
       "Supported Versions": 1.0
     },
     {
@@ -23,8 +25,9 @@
       "Name": "Freebee Miami Beach",
       "Location": "Miami Beach, FL",
       "System ID": null,
+      "Access Information": null,
       "URL": null,
-      "Auto-Discovery URL": "(not yet published)",
+      "Auto-Discovery URL": "(forthcoming)",
       "Supported Versions": 1.0
     }
   ]
