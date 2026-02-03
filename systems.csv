@@ -1,4 +1,5 @@
-Country Code,Name,Location,System ID,Access Information,URL,Auto-Discovery URL,Supported Versions
-CA,Taxi Montréal,"Montréal, QC",(forthcoming https://www.registretaximontreal.ca/),https://taximtl.ville.montreal.qc.ca/api/gofs-lite,(forthcoming),1.0
+Country Code,Name,Location,,https://www.registretaximontreal.ca/,https://taximtl.ville.montreal.qc.ca/api/gofs-lite,1.0
+CA,Taxi Montréal,"Montréal, QC",,https://www.registretaximontreal.ca/,https://taximtl.ville.montreal.qc.ca/api/gofs-lite,1.0
 US,Pace On Demand,"Arlington Heights, IL",,,,(forthcoming),1.0
 US,Freebee Miami Beach,"Miami Beach, FL",,,,(forthcoming),1.0
+
