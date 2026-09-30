@@ -26,6 +26,9 @@ GOFS is a work in progress, there are currently important missing functionalitie
 ## GOFS JSON schema
 A JSON schema which can be used to validate GOFS feeds can be found [here](schema/).
 
+## GTFS-Flex to GOFS converter
+A [Python tool](https://pypi.org/project/GTFS-flex-to-GOFS/) to convert [GTFS-Flex](https://gtfs.org/documentation/schedule/examples/flex/) (General Transit Feed Specification - Flexible services) data to the [GOFS](https://github.com/MobilityData/GOFS/blob/main/reference.md) (General On-demand Feed Specification) format. Developed and maintained by [Transit](https://github.com/TransitApp).
+
 ## Community
 GOFS is an open standard. It relies on users like you to contribute ideas, concrete improvements to the technology, and provide peer technical support. Please get involved!
 - The offical specification change process can be found under [governance.md](https://github.com/MobilityData/GOFS/blob/main/governance.md).
