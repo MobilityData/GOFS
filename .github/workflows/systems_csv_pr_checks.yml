@@ -1,0 +1,53 @@
+name: systems.csv PR checks
+
+# Runs whenever a pull request adds or changes systems.csv, this workflow, or the scripts it runs.
+#   1. validate-structure - fail on malformed rows / missing required values.
+#   2. check-new-urls     - fail if any newly added URL does not return HTTP 200-299.
+# systems.json is not checked: it is generated from systems.csv after merge.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - systems.csv
+      - .github/workflows/systems_csv_pr_checks.yml
+      - scripts/validate-systems-csv.js
+      - scripts/check-new-urls.js
+
+# Cancel superseded runs when new commits are pushed to the same PR.
+concurrency:
+  group: systems-csv-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate-structure:
+    name: Validate structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24
+      - name: Validate systems.csv structure
+        run: node scripts/validate-systems-csv.js systems.csv
+
+  check-new-urls:
+    name: Check new URLs return 2xx
+    runs-on: ubuntu-latest
+    # Only spend network requests once the file is known to be well-formed.
+    needs: validate-structure
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 24
+      - name: Extract base systems.csv
+        run: |
+          git show "${{ github.event.pull_request.base.sha }}:systems.csv" > /tmp/systems.base.csv 2>/dev/null \
+            || : > /tmp/systems.base.csv
+      - name: Check newly added URLs
+        run: node scripts/check-new-urls.js /tmp/systems.base.csv systems.csv
