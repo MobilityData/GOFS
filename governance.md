@@ -35,7 +35,7 @@ flowchart LR
     C(("✅
     **Vote Passes**
     Unanimity with at least 
-    3 votes, including 
+    2 votes, including 
     1 producer and 
     1 consumer."))
     D{"❌
