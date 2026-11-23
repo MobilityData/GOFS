@@ -874,6 +874,7 @@ The uris provided in `realtime_booking` (`android_uri`, `ios_uri`, `web_uri`) an
 
 Param | Presence | Type | Description
 ---|---|---|---
+`service_type` | REQUIRED | String | Type of service the user intends to book. Used to differentiate vehicle categories (ex. standard, luxury, minivan, etc.).
 `pickup_lat` | REQUIRED | Latitude | Latitude of the location where the user will be picked up.
 `pickup_lon` | REQUIRED | Longitude | Longitude of the location where the user will be picked up.
 `pickup_address` | OPTIONAL | String | Full address of the location where the user will be picked up.
@@ -886,5 +887,5 @@ Param | Presence | Type | Description
 #### Example
 
 ```
-https://www.example.com?pickup_lat=45.52585187926036&pickup_lon=-73.59502716927499&drop_off_lat=45.53614412053443&drop_off_lon=-73.5130921428607&pick_up_time=1726173300000&drop_off_time=1726173600000
+https://www.example.com?service_type=taxi-registry-standard&pickup_lat=45.52585187926036&pickup_lon=-73.59502716927499&drop_off_lat=45.53614412053443&drop_off_lon=-73.5130921428607&pick_up_time=1726173300000&drop_off_time=1726173600000
 ```
