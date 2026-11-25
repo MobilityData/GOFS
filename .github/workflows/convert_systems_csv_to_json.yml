@@ -21,7 +21,7 @@ jobs:
     
       - name: Load secrets from 1Password
         id: onepw_secrets
-        uses: 1password/load-secrets-action@v2.0.0
+        uses: 1password/load-secrets-action@v5.0.1
         with:
             export-env: true # Export loaded secrets as environment variables
         env:
@@ -29,7 +29,7 @@ jobs:
             GITHUB_TOKEN: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/GitHub generic action token for all repos/credential"
             
       - name: Checkout repo
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v7.0.1
 
       - name: Create branch name
         id: create_branch_name
@@ -37,7 +37,7 @@ jobs:
             echo "BRANCH=feat-update-systems-json-${{ env.TODAYS_YEAR }}-${{ env.TODAYS_MONTH }}-${{ env.TODAYS_DAY }}" >> $GITHUB_OUTPUT
 
       - name: Set up Python
-        uses: actions/setup-python@v6.0.0
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.11'
 
@@ -70,7 +70,7 @@ jobs:
 
       - name: Commit & Create Pull Request
         id: createpr
-        uses: peter-evans/create-pull-request@v7.0.6
+        uses: peter-evans/create-pull-request@v8.1.1
         with:
           token: ${{ env.GITHUB_TOKEN }}
           sign-commits: true
